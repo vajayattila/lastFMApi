@@ -28,13 +28,14 @@ lastFMApi={
                         title=response.icestats.source.title;                
                     }                    
                     if(title!=lastFMApi.lastTrack){
+                        var tracks=document.getElementById("tracks");  
                         lastFMApi.lastTrack=title;
                         if(title.search("-")!=-1){
                             var artist=title.substring(0,title.search("-")).trim();
                             var track=title.substring(title.search("-")+1).trim();
+                            tracks.innerHTML="";
                             lastFMApi.trackGetInfo(artist, track);
                         }else{
-                            var tracks=document.getElementById("tracks");  
                             img.src="./img/blank-cover.jpg";
                             album.style.display="none";
                             release.style.display="none"; 
