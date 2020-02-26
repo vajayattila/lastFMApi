@@ -27,7 +27,7 @@ body{
     display: block;
     margin: 0 auto 0 auto;
     padding: 0;
-    background-color: darkslategray;
+    background-color: transparent;
     width: 100%;
     text-align: center;
 }
@@ -44,7 +44,6 @@ body{
 }
 
 .album{
-    padding-bottom: 5px;
     display: block;
 }
 
@@ -52,6 +51,11 @@ body{
     padding-top: 5px;    
     display: block;
     color: red;
+}
+
+.artist{  
+    display: block;
+    color: rgb(44, 161, 29);
 }
 
 .tracks{
