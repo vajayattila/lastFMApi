@@ -1,0 +1,33 @@
+<!--/**
+ *  @file lastfmapi.html
+ *  @brief Demonstration of using LastFM API for IceCast server. 
+ *  Project home: https://github.com/vajayattila/lastFMApi.git
+ *	@author Vajay Attila (vajay.attila@gmail.com)
+ *  @copyright MIT License (MIT)
+ *  @date 2020.02.23-2020.02.26
+ *  @version 1.0.0.1
+ */-->
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="UTF-8">
+    <title>lastfm Album</title>
+    <script type="text/javascript" src="./js/lastfmapi.js"></script> 
+    <link rel="stylesheet" type="text/css" href="./css/lastfmapi.css">
+</head>
+<body onload="
+    lastFMApi.setup(
+        'https://vps.vyata.hu:9011/status-json.xsl','9685d02a4393c41bb141465ae1ab9855',
+        'transparent', './img/skeleton.jpg', false, true, true, false, true
+    )"
+>  
+    <div class="albumInfo"> 
+        <div id="cover" class="image"><img id="img" width="100%"></div>   
+        <div id="artist" class="artist"></div>                
+        <div id="album" class="album"></div>     
+        <div id="release" class="release"></div>       
+        <div id="tracks" class="tracks"></div>                
+        <div id="debug"></div>          
+    </div>
+</body> 
+</html>
